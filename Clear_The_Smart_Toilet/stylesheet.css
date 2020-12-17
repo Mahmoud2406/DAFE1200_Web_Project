@@ -1,0 +1,488 @@
+html {
+  overflow-y: hidden;
+  height: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.5;
+  font-size: 15pt;
+  font-weight: 340;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  color: white;
+  background: #f9f9f9;
+  scroll-behavior: smooth;
+}
+
+*:focus {
+  outline-color: red;
+  outline-style: solid;
+  outline-width: thick;
+  outline-offset: -5px
+}
+
+body:focus {
+  outline-color: transparent;
+}
+
+p, h2, h3 {
+  padding: 3vh;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  margin-left: 3vh;
+  margin-top: 1vh;
+  display: inline-block;
+}
+
+input {
+  display: none;
+}
+
+hr {
+  background-color: black;
+  height: 5px;
+  margin: 0;
+}
+
+#image {
+  display: block;
+  line-height: 1.2vh;
+}
+
+#fixed {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
+  height: 7vh;
+}
+
+#emptyforFixed {
+  z-index: 1;
+  width: 100%;
+  height: 7vh;
+  background: #3f3f3f;
+  background-color: white;
+}
+
+#logo {
+  z-index: 1;
+  float: left;
+  width: 11vw;
+  height: 6vh;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+#menybar {
+  width: 100%;
+  height: 7vh;
+  max-height: 100vh;
+  background-color: white;
+}
+
+#meny {
+  float: left;
+  width: 60vw;
+  height: 7vh;
+}
+
+#meny ul {
+  display: inline-block;
+  overflow: hidden;
+  width: 60vw;
+  height: 7vh;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: #fff;
+}
+
+#meny li {
+  float: left;
+}
+
+#meny li a {
+  font-size: 2vh;
+  display: block;
+  display: table-cell;
+  width: 11vw;
+  height: 7vh;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #3f3f3f;
+}
+
+#meny li a:hover {
+  color: white;
+  background-color: #3f3f3f;
+}
+
+#meny li a:active {
+  color: white;
+  background-color: #777;
+}
+
+.active a {
+  color: white !important;
+  background-color: #3f3f3f;
+}
+
+#dropdown {
+  z-index: 2;
+  float: right;
+  width: 7vh;
+  height: 7vh;
+  text-align: center;
+  background-color: white;
+}
+
+#dropdown img {
+  width: 5vh;
+  height: 5vh;
+  margin: 1vh;
+  text-align: center;
+}
+
+#dropdown .click {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.drop-content {
+  position: absolute;
+  top: 7vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+  opacity: 0.9;
+}
+
+#sjekk:checked~.drop-content, .click {
+  display: block;
+}
+
+.drop-content a {
+  display: block;
+  padding: 2vh;
+  text-decoration: none;
+  color: black;
+  color: white;
+  background-color: #3f3f3f;
+  opacity: 1.0;
+}
+
+.drop-content a:hover {
+  color: #3f3f3f;
+  border: 1px solid black;
+  background-color: white;
+}
+
+#dropdown2 {
+  z-index: 2;
+  display: none;
+  float: left;
+  width: 7vh;
+  height: 7vh;
+  text-align: center;
+  background-color: white;
+}
+
+#info {
+  width: 100%;
+  min-height: 40vw;
+  height: 100%;
+  max-height: 100%;
+  color: black;
+  background-color: white;
+  display: inline-block;
+}
+
+#infotekst {
+  float: left;
+  color: black;
+  width: 50%;
+  margin: 5px 0 0 5px;
+  padding: 3%;
+}
+
+#infotekst p {
+  font-size: 2.5vw;
+  color: black;
+  margin: 0;
+  padding: 3%;
+  box-sizing: border-box;
+}
+
+#mekanismen {
+  float: right;
+  color: black;
+  width: 40%;
+  padding: 3%;
+  padding-left: 0;
+  background-color: white;
+}
+
+div.parent {
+  display: table;
+  width: 65%;
+  margin: 0 0 0 15%;
+  padding: 2%;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2), 0 3px 10px 0 rgba(0, 0, 0, .06);
+}
+
+div.parent .img {
+  display: table-cell;
+  text-align: center;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+.parent2 {
+  display: table;
+  width: 60%;
+  margin: 2% 0 0 18%;
+  padding: 2%;
+  text-align: center;
+  color: black;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2), 0 3px 10px 0 rgba(0, 0, 0, .06);
+}
+
+.parent2 p {
+  text-align: left;
+}
+
+div.text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100vw;
+  color: black;
+}
+
+div.img img {
+  width: 60%;
+  border: 1px solid grey;
+  vertical-align: middle;
+}
+
+#imagetext {
+  color: dimgray;
+  font-style: oblique;
+  font-size: 12pt;
+}
+
+.tekstforlosning {
+  width: 100%;
+}
+
+.mobilpakket {
+  text-align: center;
+}
+
+.accessibility ul, .accessibility p {
+  font-weight: bold;
+  padding: 2vh;
+  text-decoration: none;
+  margin: 0;
+}
+
+.accessibility li {
+  font-weight: normal;
+  padding: 2vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  text-decoration: none;
+  border: 1vh solid white;
+  background-color: #3f3f3f;
+  color: white;
+}
+
+#footer {
+  font-size: 80%;
+  padding: 2%;
+  text-align: center;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  background-color: #3f3f3f;
+}
+
+#footer p {
+  background-color: #3f3f3f;
+  text-align: center;
+}
+
+#topicon {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 5%;
+}
+
+#mail {
+  color: blue;
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-color: #3f3f3f;
+    -webkit-overflow-scrolling: touch;
+  }
+  #logo {
+    position: absolute;
+    left: 50%;
+    width: auto;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .drop-content {
+    position: absolute;
+    top: 7vh;
+  }
+  .drop-content2 a {
+    display: block;
+    padding: 2vh;
+    text-decoration: none;
+    color: black;
+    color: white;
+    background-color: #3f3f3f;
+    opacity: 1.0;
+  }
+  .drop-content2 {
+    position: absolute;
+    top: 7vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+    opacity: 0.9;
+  }
+  .drop-content2 a:hover {
+    color: #3f3f3f;
+    border: 1px solid black;
+    background-color: white;
+  }
+  #dropdown2 {
+    display: block;
+    float: left;
+  }
+  #dropdown2 .click2 {
+    position: relative;
+    height: 7vh;
+    display: block;
+    cursor: pointer;
+  }
+  #dropdown2 input:checked~.drop-content2 {
+    display: block;
+  }
+  #meny {
+    display: none;
+  }
+  #footer {
+    padding: 3vh;
+  }
+  #footer p {
+    margin: 0;
+    font-size: 1vh;
+    padding: 1vh;
+  }
+  #infotekst {
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #info {
+    display: inline-block;
+    width: 100vw;
+    height: 80%;
+  }
+  #info p {
+    font-size: 4.5vw;
+    color: black;
+    max-height: 100%;
+    margin-top: 0vh;
+  }
+  #topicon {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 15%;
+  }
+  div.parent {
+    display: table;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  div.parent .img {
+    display: table-row;
+    width: 100%;
+  }
+  div.parent .img img {
+    width: 100%;
+  }
+  .parent2 {
+    display: table;
+    width: 98%;
+    margin: 0% 0 0 0%;
+    text-align: center;
+    color: black;
+    background-color: white;
+  }
+  #mekanismen {
+    width: 100%;
+    padding: 0;
+  }
+  .tekstforlosning {
+    width: 100vw;
+  }
+  .mobilpakket {
+    width: 100vw;
+  }
+  .mobilpakket img {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+  }
+  .accessibility li {
+    width: 92%;
+    padding: 2%;
+    border: 2% solid white;
+    margin: 0;
+  }
+  .kontakt {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10%;
+    color: #000000;
+  }
+  .kontaktoss {
+    text-align: left;
+    color: #000000;
+    font-size: 3vh;
+    padding-bottom: 0;
+    margin: 0;
+  }
+}
